@@ -25,3 +25,10 @@ COPY src .
 
 # start model service
 CMD uvicorn api_service:app --port 5002 --host 0.0.0.0
+
+# docker build -t averagervctrainer-nlp .
+# docker run -p 5002:5002 --gpus all -d averagervctrainer-nlp
+# docker kill CONTAINER-ID
+# docker tag averagervctrainer-nlp asia-southeast1-docker.pkg.dev/dsta-angelhack/repository-averagervctrainer/averagervctrainer-nlp:latest
+# docker push asia-southeast1-docker.pkg.dev/dsta-angelhack/repository-averagervctrainer/averagervctrainer-nlp:latest
+# gcloud ai models upload --region asia-southeast1 --display-name 'averagervctrainer-nlp' --container-image-uri asia-southeast1-docker.pkg.dev/dsta-angelhack/repository-averagervctrainer/averagervctrainer-nlp:latest --container-health-route /health --container-predict-route /extract --container-ports 5002 --version-aliases default
