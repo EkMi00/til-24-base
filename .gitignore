@@ -1,5 +1,3 @@
-models/
-/vlm/images
 nlp/src/ner_model
 nlp/src/test-ner
 nlp/src/tokenizer
