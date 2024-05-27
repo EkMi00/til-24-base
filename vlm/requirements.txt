@@ -20,6 +20,7 @@ torchmetrics
 datasets
 albumentations
 scipy>=1.4.1
+pycocotools
 
 fastapi
 uvicorn[standard]
