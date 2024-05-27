@@ -1,5 +1,8 @@
 models/
 /vlm/data
+/vlm-images
+vlm/src/owlvit-base-patch32_FT
+vlm/src/local
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
