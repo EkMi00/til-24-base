@@ -9,7 +9,7 @@ class VLMManager:
     def identify(self, image: bytes, caption: str) -> List[int]:
         # perform object detection with a vision-language model
 
-        model_path = "google/owlvit-base-patch32"
+        model_path = "local/custom_owl_vit_1"
         detector = pipeline(model=model_path, task="zero-shot-object-detection") #model_path
 
         predictions = detector(
