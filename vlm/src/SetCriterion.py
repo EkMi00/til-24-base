@@ -36,7 +36,7 @@ class SetCriterion(nn.Module):
 		"""Classification loss (NLL)
 		targets dicts must contain the key "labels" containing a tensor of dim [nb_target_boxes]
 		"""
-		logging.info(f"loss_labels - {outputs.keys()}")
+		# logging.info(f"loss_labels - {outputs.keys()}")
 		assert 'logits' in outputs
 		src_logits = outputs['logits']
 
@@ -116,8 +116,8 @@ class SetCriterion(nn.Module):
 				targets: list of dicts, such that len(targets) == batch_size.
 						The expected keys in each dict depends on the losses applied, see each loss' doc
 		"""
-		logging.info(f"{type(outputs)=}")
-		logging.info(f"{type(targets)=}")
+		# logging.info(f"{type(outputs)=}")
+		# logging.info(f"{type(targets)=}")
 		outputs_without_aux = {k: v for k, v in outputs.items() if k != 'aux_outputs'}
 
 		# Retrieve the matching between the outputs of the last layer and the targets

@@ -1,7 +1,6 @@
 import logging
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
 from scipy.optimize import linear_sum_assignment
 

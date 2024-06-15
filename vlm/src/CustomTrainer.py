@@ -1,5 +1,5 @@
 import torch
-from transformers import Trainer, AutoModelForZeroShotObjectDetection
+from transformers import Trainer
 from HungarianMatcher import HungarianMatcher
 from SetCriterion import SetCriterion
 

@@ -1,6 +1,4 @@
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
 
 # Using Detr-Loss calculation https://github.com/facebookresearch/detr/blob/main/models/matcher.py
 # https://www.kaggle.com/code/bibhasmondal96/detr-from-scratch

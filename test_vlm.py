@@ -17,7 +17,8 @@ TEAM_TRACK = os.getenv("TEAM_TRACK")
 
 def main():
     # input_dir = Path(f"/home/jupyter/{TEAM_TRACK}")
-    input_dir = Path(f"../../data/{TEAM_TRACK}/train")
+    input_dir = Path("vlm/data")
+    # input_dir = Path(f"../../data/{TEAM_TRACK}/train")
     # results_dir = Path(f"/home/jupyter/{TEAM_NAME}")
     results_dir = Path("results")
 
@@ -27,6 +28,7 @@ def main():
     counter = 0
 
     with open(input_dir / "vlm.jsonl", "r") as f:
+    # with open(input_dir / "vlm2.jsonl", "r") as f:
         for line in f:
             if line.strip() == "":
                 continue
@@ -71,7 +73,8 @@ def run_batched(
     for index in tqdm(range(0, len(instances), batch_size)):
         _instances = instances[index : index + batch_size]
         response = requests.post(
-            "http://localhost:5004/identify",
+            "http://localhost:5004//identify",
+            # "http://localhost:8000/identify",
             data=json.dumps(
                 {
                     "instances": [
