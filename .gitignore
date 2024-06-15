@@ -3,6 +3,12 @@ nlp/src/test-ner
 nlp/src/tokenizer
 nlp/data
 
+vlm/data
+vlm/src/owlvit-FT
+vlm/src/local
+
+results
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
