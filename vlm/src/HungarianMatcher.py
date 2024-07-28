@@ -45,10 +45,15 @@ class HungarianMatcher(nn.Module):
                 len(index_i) = len(index_j) = min(num_queries, num_target_boxes)
         """
         logging.info(f"{outputs.keys()=}")
-        bs, num_queries = outputs["logits"].shape[:2]
+        bs, num_queries, classes = outputs["logits"].shape
 
         # We flatten to compute the cost matrices in a batch
-        out_prob = outputs["logits"].flatten(0, 1).softmax(-1)  # [batch_size * num_queries, num_classes]
+        #For OWLV2 only, the probability of each box includes its "objectness probability" given by its "objectness logit"
+        out_prob = outputs["logits"].flatten(0, 1).softmax(-1)*outputs["objectness_logits"].flatten(0,1).sigmoid().unsqueeze(-1).repeat(1,classes) # [batch_size * num_queries, num_classes]
+       
+        #For OWL-ViT
+        # out_prob = outputs["logits"].flatten(0, 1).softmax(-1)
+        
         out_bbox = outputs["pred_boxes"].flatten(0, 1)  # [batch_size * num_queries, 4]
 
         # Also concat the target labels and boxes

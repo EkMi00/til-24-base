@@ -1,14 +1,14 @@
 # pandas
-# numpy
-pillow
-
-transformers[torch]>=4.39.3
-# torch>=2.2.2
-# torchvision>=0.17.2
-# torchmetrics
-# datasets
-# albumentations
-# scipy>=1.4.1
+accelerate==0.31.0
+transformers[torch]==4.41.2
+sentence-transformers
+datasets==2.19.1
+torchmetrics==1.4.0
+albumentations==1.1.0
+scipy==1.12.0
+pillow==9.4.0
+deepseed==0.14.4
+timm
 # pycocotools
 
 fastapi

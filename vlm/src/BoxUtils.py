@@ -9,6 +9,12 @@ class BoxUtils(object):
         b = [(x_c - 0.5 * w), (y_c - 0.5 * h),
              (x_c + 0.5 * w), (y_c + 0.5 * h)]
         return torch.stack(b, dim=-1)
+    
+    @staticmethod
+    def box_xywh_to_xyxy(x):
+        x, y, w, h = x.unbind(-1)
+        b = [x, y, x + w, y + h]
+        return torch.stack(b, dim=-1)
 
     @staticmethod
     def box_xyxy_to_cxcywh(x):
@@ -36,7 +42,7 @@ class BoxUtils(object):
             area (Tensor[N]): area for each box
         """
         return (boxes[:, 2] - boxes[:, 0]) * (boxes[:, 3] - boxes[:, 1])
-        
+
     @staticmethod
     # modified from torchvision to also return the union
     def box_iou(boxes1, boxes2):
