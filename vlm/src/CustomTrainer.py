@@ -48,5 +48,5 @@ class CustomTrainer(Trainer):
         criterion = SetCriterion(num_classes, matcher=matcher, weight_dict=weight_dict, eos_coef=0.005, losses=losses)
         criterion.to(self.device)
         loss = criterion(logits, labels)
-        # print(labels)
+        # print(loss)
         return loss

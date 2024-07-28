@@ -159,5 +159,5 @@ class SetCriterion(nn.Module):
             # print(loss)
             losses.update(self.get_loss(loss, outputs, targets, indices, num_boxes))
         
-        print(losses)
+        # print(losses)
         return losses
