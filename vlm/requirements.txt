@@ -7,7 +7,7 @@ torchmetrics==1.4.0
 albumentations==1.1.0
 scipy==1.12.0
 pillow==9.4.0
-deepseed==0.14.4
+# deepseed==0.14.4
 timm
 # pycocotools
 
