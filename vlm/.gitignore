@@ -1,8 +1,3 @@
-nlp/data
-nlp/src/ner_model
-nlp/src/test-ner
-nlp/src/tokenizer
-
 vlm/data
 vlm/src/owlvit-FT
 vlm/src/local
