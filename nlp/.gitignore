@@ -3,18 +3,8 @@ nlp/src/ner_model
 nlp/src/test-ner
 nlp/src/tokenizer
 
-vlm/data
-vlm/src/owlvit-FT
-vlm/src/local
-
 results
 models/
-
-vlm/data
-vlm/src/owlvit-FT
-vlm/src/local
-
-results
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
