@@ -1,3 +1,8 @@
+data
+src/ner_model
+src/test-ner
+src/tokenizer
+
 results
 models/
 
