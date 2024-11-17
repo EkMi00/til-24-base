@@ -1,7 +1,7 @@
-nlp/data
-nlp/src/ner_model
-nlp/src/test-ner
-nlp/src/tokenizer
+data
+src/ner_model
+src/test-ner
+src/tokenizer
 
 results
 models/

@@ -1,6 +1,6 @@
-vlm/data
-vlm/src/owlvit-FT
-vlm/src/local
+data
+src/owlvit-FT
+src/local
 
 results
 models/
